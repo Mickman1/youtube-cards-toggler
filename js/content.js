@@ -1,0 +1,5 @@
+let rightControlsElement = document.getElementsByClassName('ytp-right-controls')[0]
+let cardToggleBtnElement = `<button id="card-toggle-btn" onclick="var cardsElement = document.getElementsByClassName('ytp-ce-element'); for (let i = 0; i < cardsElement.length; i++) { if (cardsElement[i].style.display === 'none') { cardsElement[i].style.display = 'block' } else { cardsElement[i].style.display = 'none' }}" class="ytp-button" data-tooltip-target-id="ytp-autonav-toggle-button" style="" aria-label="Autoplay is off" title="Autoplay is off"></button>`
+rightControlsElement.insertAdjacentHTML('afterbegin', cardToggleBtnElement)
+let svgElement = `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-layout-cards" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" version="1.1" fill-opacity="1" height="100%" viewBox="0 0 36 36" width="100%"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><rect x="8" y="8" width="6" height="16" rx="2"></rect><rect x="18" y="14" width="6" height="10" rx="2"></rect></svg>`
+document.getElementById('card-toggle-btn').insertAdjacentHTML('afterbegin', svgElement)
